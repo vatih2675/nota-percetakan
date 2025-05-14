@@ -73,17 +73,15 @@ export default function Data({dataNota, tanggalHariIni}){
                           <tbody>
                             <tr>
                               <td className="w-[20%] text-gray-600">Nomor</td>
-                              <td className="text-center w-[5%] text-gray-600">:</td>
-                              <th className="text-start">
-                                {nt.nomor}
-                              </th>
+                              <td className="text-center w-[5%] text-gray-600">
+                                :
+                              </td>
+                              <th className="text-start">{nt.nomor}</th>
                             </tr>
                             <tr>
                               <td className="text-gray-600">Tanggal</td>
                               <td className="text-center text-gray-600">:</td>
-                              <th className="text-start">
-                                {tanggalHariIni}
-                              </th>
+                              <th className="text-start">{tanggalHariIni}</th>
                             </tr>
                             <tr>
                               <td className="text-gray-600">Kepada</td>
@@ -95,7 +93,11 @@ export default function Data({dataNota, tanggalHariIni}){
                       </div>
                     </div>
                   </div>
-                  <img src="images/logo.png" alt="Logo UBMG" className="absolute w-70 sm:w-50 top-28 sm:top-20 left-0 translate-1/2 bg-transparent z-0" />
+                  <img
+                    src="images/logo.png"
+                    alt="Logo UBMG"
+                    className="absolute w-70 sm:w-50 top-28 sm:top-20 left-0 translate-1/2 bg-transparent z-0"
+                  />
                   <table className="relative w-full sm:text-xs bg-white/95 z-1">
                     <thead>
                       <tr className="bg-sky-500 text-white">
@@ -122,7 +124,7 @@ export default function Data({dataNota, tanggalHariIni}){
                           <td className="p-2 sm:p-1 border border-gray-300 text-center">
                             {index + 1}
                           </td>
-                          <td className="p-2 sm:p-1 border border-gray-300 text-center">
+                          <td className="p-2 sm:p-1 border border-gray-300 text-start">
                             {dt.uraian}
                           </td>
                           <td className="p-2 sm:p-1 border border-gray-300 text-center">
@@ -191,7 +193,9 @@ export default function Data({dataNota, tanggalHariIni}){
         </tbody>
         <tfoot>
           <tr className="text-sky-700 bg-sky-100">
-            <th className="p-1 border border-gray-200 text-end" colSpan="3">TOTAL Rp. {angka(totalTransaksi)}</th>
+            <th className="p-1 border border-gray-200 text-end" colSpan="3">
+              TOTAL Rp. {angka(totalTransaksi)}
+            </th>
           </tr>
         </tfoot>
       </table>
