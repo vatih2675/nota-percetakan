@@ -5,7 +5,10 @@ import Invoice from "./cashier/Invoice";
 export default function Cashier({dataNota, setDataNota}){
     const dateTime = new Date()
     const tahun = dateTime.getFullYear()
-    const bulan = dateTime.getMonth() < 10 ? "0" + dateTime.getMonth() : dateTime.getMonth()
+    const bulan =
+      dateTime.getMonth() + 1 < 10
+        ? "0" + (dateTime.getMonth() + 1)
+        : dateTime.getMonth() + 1;
     const tanggal = dateTime.getDate() < 10 ? "0" + dateTime.getDate() : dateTime.getDate()
     const [uraian, setUraian] = useState("")
     const [jumlah, setJumlah] = useState(0)
